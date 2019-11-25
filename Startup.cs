@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace EmployeeManagement
 {
-    //----ASP.NET CORE TUTORIAL 57-----//
+    //----ASP.NET CORE TUTORIAL 62-----//
 
     public class Startup
     {
@@ -39,6 +39,11 @@ namespace EmployeeManagement
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
             }
 
             app.UseStaticFiles();
