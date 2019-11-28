@@ -18,7 +18,7 @@ namespace EmployeeManagement.ViewModels
 
         [DataType(DataType.Password)]
         [Display(Name ="Confirm Password")]
-        [Compare("Password",ErrorMessage ="Password and confirm passwrd do nt match.")]
+        [Compare("Password",ErrorMessage ="Password and confirm password do not match.")]
         public string ConfirmPassword { get; set; }
     }
 }
